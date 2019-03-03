@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .row {
+                display:inline           
+            }
+            p {
+                font-size: 17px;
+            }
+            li {
+                font-size:17px;
+            }
+            ul li {
+	            list-style-type: square;
+            }
+        </style>
+      
+        
+        <script type="text/javascript" src = "code.js"> </script>
+    </head>
+    <body onload='context.init()'>
+        <nav class = "navbar navbar-inverse">
+            <div class = "container-fluid">
+            <div class="navbar-header">
+                <a href="#" class = "navbar-brand">BinarySearchTree</a>
+            </div>
+                <ul class="nav navbar-nav">
+                    
+                </ul>
+                <button onclick="context.showTraverseDirect()" class="btn btn-primary navbar-btn">traverseDirect</button>
+                <button onclick="context.showTraverseReverse()" class="btn btn-primary navbar-btn">traverseReverse</button>
+                <button onclick="context.showLevelTraverse()" class="btn btn-primary navbar-btn">levelTraverse</button>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="searchVal" placeholder="Search">
+                    </div>
+                    <button type="submit" onclick = "context.search(document.getElementById('searchVal').value)" class="btn btn-default">Submit</button>
+                </form>
+                <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" id="deleteVal" class="form-control" placeholder="Delete">
+                        </div>
+                        <button type="submit" onclick = "context.deleteItem(document.getElementById('deleteVal').value)" class="btn btn-default">Submit</button>
+                </form>
+                <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id='addVal' placeholder="Add">
+                        </div>
+                        <button type="submit" onclick="context.addItem(document.getElementById('addVal').value)" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </nav>
+        <div id="tree">
+		</div>
+    </body>
+</html>
